@@ -1,0 +1,17 @@
+.nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--morado);
+    outline: none;
+    transition: .5s;
+    border-radius: 0;
+}
+
+
+.nav-link.active {
+    color: white;
+}
+
+.nav-link.active {
+    background-color: var(--morado);
+}

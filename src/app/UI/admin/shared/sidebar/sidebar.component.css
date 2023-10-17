@@ -1,0 +1,61 @@
+.sidenav-container {
+  height: 100vh;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.mat-icon {
+  margin-right: 1em;
+}
+
+li {
+  padding: 1em;
+  cursor: pointer;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  color: var(--morado);
+}
+
+li:hover {
+  text-decoration: underline;
+}
+
+li.active {
+  background: var(--morado);
+  border-radius: .6em;
+  color: white;
+}
+
+p {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+.logout-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px; /* Ajusta el relleno según sea necesario */
+  background-color: #fff; /* Cambia el color de fondo según sea necesario */
+}
+
+.logout-button button {
+  padding: .5em 4em;
+}
