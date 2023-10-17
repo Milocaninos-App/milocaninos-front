@@ -1,0 +1,32 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Administrator</mat-toolbar>
+    <mat-nav-list>
+      <ng-container *ngFor="let item of navItems">
+        <li routerLinkActive="active" [routerLink]="item.link">
+          <mat-icon>{{ item.icon }}</mat-icon>
+          <span>{{ item.label }}</span>
+        </li>
+      </ng-container>
+    </mat-nav-list>
+
+    <!-- Log Out -->
+    <div class="logout-button">
+      <button class="btn btn-danger" routerLink="/auth">Logout</button>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+      *ngIf="isHandset$ | async">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <!-- <mat-toolbar color="primary">
+      
+      <span>milocaninos-front</span>
+    </mat-toolbar> -->
+
+    <!-- Contenido -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

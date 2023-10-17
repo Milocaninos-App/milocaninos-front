@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+    <a href="/" class="navbar-brand ms-lg-5">
+        <h1 class="m-0 text-uppercase fw-bold text-dark"><i class="bi bi-shop fs-1 me-3"></i>MiloCaninos</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-0">
+            <a *ngFor="let item of menuItems" class="nav-item nav-link" (click)="scrollToElement(item.sectionId)">
+                {{ item.label }}
+            </a>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">DOGS</a>
+                <div class="dropdown-menu m-0">
+                    <a *ngFor="let subpage of pagesSubmenu" class="dropdown-item" [attr.href]="'#' + subpage.sectionId">
+                        {{ subpage.label }}
+                    </a>
+                </div>
+            </div>
+            <a href="/auth/login" routerLinkActive="router-link-active"  class="nav-item nav-link nav-contact bg-morado text-white px-5 ms-lg-5">Log In <i class="bi text-white bi-arrow-right"></i></a>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,25 @@
+<div class="contenedor">
+    <section class="wrapper" [ngClass]="{'active': isActive}">
+        <div class="form signup">
+            <header (click)="toggleForm('signup')">Signup</header>
+            <form [formGroup]="registerForm" (ngSubmit)="submitRegisterForm()">
+                <input formControlName="name" type="text" placeholder="Full name" required />
+                <input formControlName="email" type="text" placeholder="Email address" required />
+                <input formControlName="password" type="password" placeholder="Password" required />
+                <button [disabled]="registerForm.invalid" type="submit" class="btn btn-outline-light">Sign Up</button>
+            </form>
+        </div>
+        <div class="form login">
+            <header (click)="toggleForm('login')">Login</header>
+            <form action="#">
+                <input type="text" placeholder="Email address" required />
+                <input type="password" placeholder="Password" required />
+                <div class="d-flex">
+                    <a href="#">Forgot password?</a>
+                    <a class="fw-bolder" href="/">Volver al Home</a>
+                </div>
+                <input type="submit" value="Login" />
+            </form>
+        </div>
+    </section>
+</div>

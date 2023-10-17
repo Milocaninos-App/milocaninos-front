@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --negro: #23242a;
+    --morado: #8b007df2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+i {
+    color: var(--morado) !important;
+}
+
+a {
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: var(--negro); */
+    overflow-x: hidden;
+}
+
+.bg-morado {
+    background-color: var(--morado);
+}
+
+.contenedor {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton {
+    background-color: var(--morado);
+    color: white;
+}
+
+.boton:hover {
+    background-color: rgba(168, 4, 152, 0.949);
+    color: white;
+}
+
+.boton:active {
+    background-color: rgba(168, 4, 152, 0.949) !important;
+    border: none !important; 
+    color: white !important;
+    padding: .5em 4em !important;
+}
+
+.text-primary {
+    color: var(--morado) !important;
+}
+
+.border-primary {
+    border-color: var(--morado) !important;
+}

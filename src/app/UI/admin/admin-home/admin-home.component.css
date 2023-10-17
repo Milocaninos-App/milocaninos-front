@@ -1,0 +1,26 @@
+.contenedor {
+    min-height: 100vh;
+}
+
+.admin-image {
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.admin-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+
+.col button {
+    padding: .5em 4em;
+}
